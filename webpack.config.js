@@ -5,6 +5,10 @@ export default {
         test: /\.js/,
         use: "babel-loader",
       },
+      {
+        test: /\.(jpg|png)/,
+        type: "asset/resource",
+      },
     ],
   },
   watch: true,
