@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router";
-
-const hostname = window.location.hostname;
-console.log(`hostname: ${hostname}`);
+import { getRoot } from "../modules/root";
 
 export function Navbar() {
+  const root = getRoot();
+
   return (
     <nav>
-      <Link to="/">HOME | </Link>
-      <Link to="/gallery">GALLERY | </Link>
-      <Link to="/contact">CONTACT</Link>
+      <Link to={root + "/"}>HOME | </Link>
+      <Link to={root + "/gallery"}>GALLERY | </Link>
+      <Link to={root + "/contact"}>CONTACT</Link>
     </nav>
   );
 }
