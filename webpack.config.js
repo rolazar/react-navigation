@@ -6,7 +6,7 @@ export default {
         use: "babel-loader",
       },
       {
-        test: /\.(jpg|png)/,
+        test: /\.(jpg|png|ico)/,
         type: "asset/resource",
       },
     ],
