@@ -2065,6 +2065,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Home() {
+  const domain = window.location.hostname;
+  console.log(`Domain: ${domain}`);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Banner__WEBPACK_IMPORTED_MODULE_2__.Banner, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Navbar__WEBPACK_IMPORTED_MODULE_1__.Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "The Venue"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     id: "interior"
   }, "Interior"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Lorem ipsum odor amet, consectetuer adipiscing elit. Penatibus sollicitudin ridiculus cras tincidunt ultricies efficitur nec. Ullamcorper potenti sodales mi accumsan ornare venenatis justo. Interdum aptent vulputate dignissim suspendisse sollicitudin. Sociosqu pharetra egestas risus; sollicitudin auctor sollicitudin penatibus condimentum. Augue pulvinar aptent; taciti ut consequat nunc. Proin leo accumsan id congue suspendisse; viverra orci. Vulputate ipsum sociosqu nunc felis aliquam facilisis hac consectetur nibh. Iaculis habitant at aliquet nec aptent, maecenas torquent aptent. Nunc urna porttitor nisi, ullamcorper neque tempor in nostra."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
@@ -2095,34 +2097,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
-/* harmony import */ var _modules_root__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/root */ "./src/modules/root.js");
+/* harmony import */ var _modules_getRootPath__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/getRootPath */ "./src/modules/getRootPath.js");
 
 
 
 function Navbar() {
-  const root = (0,_modules_root__WEBPACK_IMPORTED_MODULE_1__.getRoot)();
+  const rootPath = (0,_modules_getRootPath__WEBPACK_IMPORTED_MODULE_1__.getRootPath)();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: root + "/"
+    to: `${rootPath}/`
   }, "HOME | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: root + "/gallery"
+    to: `${rootPath}/gallery`
   }, "GALLERY | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: root + "/contact"
+    to: `${rootPath}/contact`
   }, "CONTACT"));
 }
 
 /***/ }),
 
-/***/ "./src/modules/root.js":
-/*!*****************************!*\
-  !*** ./src/modules/root.js ***!
-  \*****************************/
+/***/ "./src/modules/getRootPath.js":
+/*!************************************!*\
+  !*** ./src/modules/getRootPath.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getRoot: () => (/* binding */ getRoot)
+/* harmony export */   getRootPath: () => (/* binding */ getRootPath)
 /* harmony export */ });
-function getRoot() {
+function getRootPath() {
   let root = "";
   const hostname = window.location.hostname;
   if (hostname === "rolazar.github.io") root = "/react-navigation";
@@ -12585,23 +12587,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
 /* harmony import */ var _Views_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Views/Home */ "./src/Views/Home.js");
 /* harmony import */ var _Views_Contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Views/Contact */ "./src/Views/Contact.js");
-/* harmony import */ var _modules_root__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/root */ "./src/modules/root.js");
 
 
 
 
 
+// import { getRoot } from "./modules/root";
 
-const root = (0,_modules_root__WEBPACK_IMPORTED_MODULE_4__.getRoot)();
+// const root = getRoot();
+
 const react = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(window.bodyTag);
-react.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_5__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_5__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_5__.Route, {
-  path: root + "/",
+react.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_4__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_4__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_4__.Route, {
+  path: "/",
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Home__WEBPACK_IMPORTED_MODULE_2__.Home, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_5__.Route, {
-  path: root + "/contact",
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_4__.Route, {
+  path: "/contact",
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Contact__WEBPACK_IMPORTED_MODULE_3__.Contact, null)
 }))));
 })();

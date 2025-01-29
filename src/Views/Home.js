@@ -3,6 +3,9 @@ import { Navbar } from "./Navbar";
 import { Banner } from "./Banner";
 
 export function Home() {
+  const domain = window.location.hostname;
+  console.log(`Domain: ${domain}`);
+
   return (
     <>
       <header>
