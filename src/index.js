@@ -12,7 +12,7 @@ react.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/react-navigation" element={<Home />} />
+      <Route path="/react-navigation/" element={<Home />} />
       {/* <Route path={root + "/"} element={<Home />} /> */}
       {/* <Route path={githubRoot} element={<Home />} /> */}
       <Route path="/contact" element={<Contact />} />
