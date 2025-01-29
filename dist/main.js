@@ -2096,40 +2096,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
-/* harmony import */ var _modules_getRootPath__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/getRootPath */ "./src/modules/getRootPath.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
 
 
+// import { getRootPath } from "../modules/getRootPath";
 
 function Navbar() {
-  const rootPath = (0,_modules_getRootPath__WEBPACK_IMPORTED_MODULE_1__.getRootPath)();
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
+  // const rootPath = getRootPath();
+
+  const domain = window.location.hostname;
+  let rootPath = "";
+  if (domain === "rolazar.github.io") rootPath = "/react-navigation";
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: `${rootPath}/`
-  }, "HOME | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
+  }, "HOME | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: `${rootPath}/gallery`
-  }, "GALLERY | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Link, {
+  }, "GALLERY | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: `${rootPath}/contact`
   }, "CONTACT"));
-}
-
-/***/ }),
-
-/***/ "./src/modules/getRootPath.js":
-/*!************************************!*\
-  !*** ./src/modules/getRootPath.js ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getRootPath: () => (/* binding */ getRootPath)
-/* harmony export */ });
-function getRootPath() {
-  let root = "";
-  const hostname = window.location.hostname;
-  if (hostname === "rolazar.github.io") root = "/react-navigation";
-  // console.log(`hostname: ${hostname}`);
-  return root;
 }
 
 /***/ }),
