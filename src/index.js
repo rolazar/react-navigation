@@ -18,6 +18,7 @@ react.render(
       {/* <Route path={githubRoot} element={<Home />} /> */}
       <Route path="/contact" element={<Contact />} />
       <Route path="/react-navigation/contact" element={<Contact />} />
+      <Route path="/react-navigation/contact/" element={<Contact />} />
       {/* <Route path={root + "/contact"} element={<Contact />} /> */}
       {/* <Route path={githubRoot + "/contact"} element={<Contact />} /> */}
     </Routes>
