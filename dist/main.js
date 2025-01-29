@@ -12604,6 +12604,12 @@ react.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createEle
   path: "/",
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Home__WEBPACK_IMPORTED_MODULE_2__.Home, null)
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_4__.Route, {
+  path: "/react-navigation",
+  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Home__WEBPACK_IMPORTED_MODULE_2__.Home, null)
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_4__.Route, {
+  path: "/react-navigation/",
+  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Home__WEBPACK_IMPORTED_MODULE_2__.Home, null)
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_4__.Route, {
   path: "/contact",
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Contact__WEBPACK_IMPORTED_MODULE_3__.Contact, null)
 }))));
