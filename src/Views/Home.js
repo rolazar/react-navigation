@@ -4,7 +4,7 @@ import { Banner } from "./Banner";
 
 export function Home() {
   const domain = window.location.hostname;
-  console.log(`Domain: ${domain}`);
+  console.log(`The domain is ${domain}`);
 
   return (
     <>
