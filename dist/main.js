@@ -2150,7 +2150,8 @@ function Navbar() {
     className: "nav nav-pills bg-dark"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
     className: "nav-link",
-    to: `${rootPath}/home`
+    to: `${rootPath}/`,
+    end: true
   }, "HOME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
     className: "nav-link",
     to: `${rootPath}/gallery`
