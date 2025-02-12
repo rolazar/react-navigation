@@ -2107,7 +2107,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Home() {
   const domain = window.location.hostname;
-  console.log(`Domain: ${domain}`);
+  console.log(`The domain is ${domain}`);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Banner__WEBPACK_IMPORTED_MODULE_2__.Banner, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Navbar__WEBPACK_IMPORTED_MODULE_1__.Navbar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "The Venue"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     id: "interior"
   }, "Interior"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Lorem ipsum odor amet, consectetuer adipiscing elit. Penatibus sollicitudin ridiculus cras tincidunt ultricies efficitur nec. Ullamcorper potenti sodales mi accumsan ornare venenatis justo. Interdum aptent vulputate dignissim suspendisse sollicitudin. Sociosqu pharetra egestas risus; sollicitudin auctor sollicitudin penatibus condimentum. Augue pulvinar aptent; taciti ut consequat nunc. Proin leo accumsan id congue suspendisse; viverra orci. Vulputate ipsum sociosqu nunc felis aliquam facilisis hac consectetur nibh. Iaculis habitant at aliquet nec aptent, maecenas torquent aptent. Nunc urna porttitor nisi, ullamcorper neque tempor in nostra."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
@@ -2144,11 +2144,16 @@ function Navbar() {
   const domain = window.location.hostname;
   let rootPath = "";
   if (domain === "rolazar.github.io") rootPath = "/react-navigation";
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
+    className: "nav nav-tabs bg-dark"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
+    className: "nav-link",
     to: `${rootPath}/`
-  }, "HOME | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, "HOME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
+    className: "nav-link",
     to: `${rootPath}/gallery`
-  }, "GALLERY | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, "GALLERY"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
+    className: "nav-link",
     to: `${rootPath}/contact`
   }, "CONTACT"));
 }
