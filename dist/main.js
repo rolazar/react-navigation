@@ -2215,7 +2215,7 @@ function Gallery() {
     style: fit,
     src: "https://cache.marriott.com/content/dam/marriott-renditions/SFODT/sfodt-guest-room-3179-hor-wide.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=375px:*"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "row"
+    className: "col"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     style: fit,
     src: "https://cache.marriott.com/content/dam/marriott-renditions/SFODT/sfodt-guestroom-3175-hor-wide.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=375px:*"
