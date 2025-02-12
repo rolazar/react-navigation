@@ -2145,7 +2145,7 @@ function Navbar() {
   let rootPath = "";
   if (domain === "rolazar.github.io") rootPath = "/react-navigation";
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
-    className: "nav nav-tabs bg-dark"
+    className: "nav nav-pills bg-dark"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
     className: "nav-link",
     to: `${rootPath}/`
