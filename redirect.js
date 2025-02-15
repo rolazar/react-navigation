@@ -1,2 +1,4 @@
+const home = "/react-navigation";
 const path = window.location.pathname;
-window.location.replace(path);
+window.location.replace(home);
+window.history.replaceState("", "", path);
