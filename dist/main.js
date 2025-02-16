@@ -2262,6 +2262,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
 
 
+
+/*************************************************
+ * @summary Removes the 404 error on SPA refresh
+ * @param props.children The elements to render on refresh
+ * @description
+ * This component depends on the local storage used by redirect.js
+ * In redirect.js, properly set the root path.
+ */
 function HandleRefresh(props) {
   const children = props.children;
   const navigateTo = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
@@ -2269,8 +2277,6 @@ function HandleRefresh(props) {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
   if (didMount) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, children);else return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
   function componentDidMount() {
-    // const urlParams = new URLSearchParams(window.location.search);
-    // const path = urlParams.get("redirect");
     const redirectPath = localStorage.getItem("redirect");
     if (redirectPath) {
       navigateTo(redirectPath);

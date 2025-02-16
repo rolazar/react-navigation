@@ -1,10 +1,14 @@
-//CHANGE THE URL WITHOUT REROUTING
-// const state = { path: path };
-// window.history.replaceState(state, "", path);
+/**************************************************************
+ * @summary Redirects the SPA to the root path
+ * @param rootPath Set this to the correct root path
+ * @description
+ * Useful when an SPA page is refreshed.
+ * Load this module through 404.html to redirect on 404 errors.
+ * By redirecting to the root path, 404 errors are removed.
+ * Use Redirect.js to redirect to the path where the 404 occured.
+ **************************************************************/
 
-//REDIRECT WITH RELOADING
 const rootPath = "/react-navigation";
 const path = window.location.pathname;
-localStorage.setItem("redirect", path);
+window.localStorage.setItem("redirect", path);
 window.location.replace(rootPath);
-// window.location.replace(`${rootPath}?redirect=${path}`);
