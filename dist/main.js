@@ -2103,6 +2103,25 @@ function Carousel() {
 
 /***/ }),
 
+/***/ "./src/Views/Code404.js":
+/*!******************************!*\
+  !*** ./src/Views/Code404.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Code404: () => (/* binding */ Code404)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Code404() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Invalid page...");
+}
+
+/***/ }),
+
 /***/ "./src/Views/Contact.js":
 /*!******************************!*\
   !*** ./src/Views/Contact.js ***!
@@ -2226,6 +2245,39 @@ function Gallery() {
 
 /***/ }),
 
+/***/ "./src/Views/HandleRefresh.js":
+/*!************************************!*\
+  !*** ./src/Views/HandleRefresh.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   HandleRefresh: () => (/* binding */ HandleRefresh)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
+
+
+function HandleRefresh(props) {
+  const children = props.children;
+  const navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
+  const [didMount, setDidMount] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
+  if (didMount) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, children);else return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
+  function componentDidMount() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const path = urlParams.get("redirect");
+    if (path) {
+      navigate(path);
+      setTimeout(() => setDidMount(true), 1000);
+    } else setDidMount(true);
+  }
+}
+
+/***/ }),
+
 /***/ "./src/Views/Header.js":
 /*!*****************************!*\
   !*** ./src/Views/Header.js ***!
@@ -2309,51 +2361,6 @@ function Navbar() {
     className: "nav-link",
     to: `${rootPath}/contact`
   }, "CONTACT"));
-}
-
-/***/ }),
-
-/***/ "./src/Views/Redirect.js":
-/*!*******************************!*\
-  !*** ./src/Views/Redirect.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Redirect: () => (/* binding */ Redirect)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
-
-
-function Redirect(props) {
-  const children = props.children;
-  const navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
-  const [didMount, setDidMount] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  // const [didUpdate, setDidUpdate] = useState(false);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
-  // useEffect(componentDidUpdate, [didMount]);
-
-  // if (didUpdate) return <>{children}</>;
-  if (didMount) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, children);else return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
-  function componentDidMount() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const path = urlParams.get("redirect");
-    if (path) {
-      navigate(path);
-      setTimeout(() => setDidMount(true), 1000);
-    } else setDidMount(true);
-  }
-  // function componentDidUpdate() {
-  //   if (didMount) {
-  //     const urlParams = new URLSearchParams(window.location.search);
-  //     const path = urlParams.get("redirect");
-  //     if (path) navigate(path);
-  //     setTimeout(() => setDidUpdate(true), 1000);
-  //   }
-  // }
 }
 
 /***/ }),
@@ -12811,13 +12818,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
 /* harmony import */ var _Views_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Views/Home */ "./src/Views/Home.js");
 /* harmony import */ var _Views_Contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Views/Contact */ "./src/Views/Contact.js");
 /* harmony import */ var _Views_Gallery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Views/Gallery */ "./src/Views/Gallery.js");
 /* harmony import */ var _Views_Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Views/Header */ "./src/Views/Header.js");
 /* harmony import */ var _Views_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Views/Footer */ "./src/Views/Footer.js");
-/* harmony import */ var _Views_Redirect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Views/Redirect */ "./src/Views/Redirect.js");
+/* harmony import */ var _Views_HandleRefresh__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Views/HandleRefresh */ "./src/Views/HandleRefresh.js");
+/* harmony import */ var _Views_Code404__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Views/Code404 */ "./src/Views/Code404.js");
+
 
 
 
@@ -12831,21 +12840,21 @@ let rootPath = "";
 const hostname = window.location.hostname;
 if (hostname === "rolazar.github.io") rootPath = "/react-navigation";
 const react = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(window.bodyTag);
-react.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Redirect__WEBPACK_IMPORTED_MODULE_7__.Redirect, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Header__WEBPACK_IMPORTED_MODULE_5__.Header, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
+react.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_HandleRefresh__WEBPACK_IMPORTED_MODULE_7__.HandleRefresh, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Header__WEBPACK_IMPORTED_MODULE_5__.Header, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
   path: `${rootPath}/`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Home__WEBPACK_IMPORTED_MODULE_2__.Home, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
   path: `${rootPath}/home/main`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Home__WEBPACK_IMPORTED_MODULE_2__.Home, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
   path: `${rootPath}/contact`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Contact__WEBPACK_IMPORTED_MODULE_3__.Contact, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
   path: `${rootPath}/gallery`,
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Gallery__WEBPACK_IMPORTED_MODULE_4__.Gallery, null)
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
   path: "*",
-  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Redirect__WEBPACK_IMPORTED_MODULE_7__.Redirect, null)
+  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Code404__WEBPACK_IMPORTED_MODULE_8__.Code404, null)
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Views_Footer__WEBPACK_IMPORTED_MODULE_6__.Footer, null))));
 })();
 
