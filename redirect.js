@@ -5,4 +5,6 @@
 //REDIRECT WITH RELOADING
 const rootPath = "/react-navigation";
 const path = window.location.pathname;
-window.location.replace(`${rootPath}?redirect=${path}`);
+localStorage.setItem("redirect", path);
+window.location.replace(rootPath);
+// window.location.replace(`${rootPath}?redirect=${path}`);

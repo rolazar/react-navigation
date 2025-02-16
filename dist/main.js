@@ -2117,7 +2117,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 function Code404() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Invalid page...");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Invalid page..."));
 }
 
 /***/ }),
@@ -2262,15 +2264,16 @@ __webpack_require__.r(__webpack_exports__);
 
 function HandleRefresh(props) {
   const children = props.children;
-  const navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
+  const navigateTo = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
   const [didMount, setDidMount] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
   if (didMount) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, children);else return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
   function componentDidMount() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const path = urlParams.get("redirect");
-    if (path) {
-      navigate(path);
+    // const urlParams = new URLSearchParams(window.location.search);
+    // const path = urlParams.get("redirect");
+    const redirectPath = localStorage.getItem("redirect");
+    if (redirectPath) {
+      navigateTo(redirectPath);
       setTimeout(() => setDidMount(true), 1000);
     } else setDidMount(true);
   }
