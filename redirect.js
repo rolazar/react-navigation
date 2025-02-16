@@ -9,4 +9,4 @@ console.log(state);
 window.history.replaceState(state, "", path);
 
 //REDIRECT WITH RELOADING
-window.location.replace(home);
+window.location.replace(`${home}?redirect=${path}`);
