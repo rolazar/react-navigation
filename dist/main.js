@@ -2332,21 +2332,28 @@ function Redirect(props) {
   const children = props.children;
   const navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
   const [didMount, setDidMount] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const [didUpdate, setDidUpdate] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  // const [didUpdate, setDidUpdate] = useState(false);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidUpdate, [didMount]);
-  if (didUpdate) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, children);else return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
+  // useEffect(componentDidUpdate, [didMount]);
+
+  // if (didUpdate) return <>{children}</>;
+  if (didMount) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, children);else return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
   function componentDidMount() {
-    setDidMount(true);
-  }
-  function componentDidUpdate() {
-    if (didMount) {
-      const urlParams = new URLSearchParams(window.location.search);
-      const path = urlParams.get("redirect");
-      if (path) navigate(path);
+    const urlParams = new URLSearchParams(window.location.search);
+    const path = urlParams.get("redirect");
+    if (path) {
+      navigate(path);
       setTimeout(() => setDidUpdate(true), 1000);
-    }
+    } else setDidMount(true);
   }
+  // function componentDidUpdate() {
+  //   if (didMount) {
+  //     const urlParams = new URLSearchParams(window.location.search);
+  //     const path = urlParams.get("redirect");
+  //     if (path) navigate(path);
+  //     setTimeout(() => setDidUpdate(true), 1000);
+  //   }
+  // }
 }
 
 /***/ }),
