@@ -2274,6 +2274,7 @@ function HandleRefresh(props) {
     const redirectPath = localStorage.getItem("redirect");
     if (redirectPath) {
       navigateTo(redirectPath);
+      localStorage.setItem("redirect", "");
       setTimeout(() => setDidMount(true), 1000);
     } else setDidMount(true);
   }
