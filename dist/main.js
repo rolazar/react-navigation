@@ -2346,7 +2346,7 @@ function Redirect(props) {
       const urlParams = new URLSearchParams(window.location.search);
       const path = urlParams.get("redirect");
       if (path) navigate(path);
-      setDidUpdate(true);
+      setTimeout(() => setDidUpdate(true), 3000);
     }
   }
 }
