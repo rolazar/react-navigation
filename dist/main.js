@@ -2283,8 +2283,10 @@ function Home() {
     id: "events"
   }, "Events"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Senectus magna ultricies finibus vehicula maecenas tempus pulvinar pulvinar pulvinar. Metus porttitor maecenas dignissim facilisi at per ac. Quam donec himenaeos interdum eget ad, eget nisl faucibus. Feugiat primis potenti torquent eget mattis sem. Etiam eget tempus leo tellus nibh hendrerit erat. Suscipit finibus curae sed sagittis tempor sociosqu fusce diam. Fermentum proin purus; praesent tempor fringilla at aenean. Lobortis ad fusce tempor feugiat nunc senectus nostra?"));
   function componentDidMount() {
-    const state = window.history.state;
-    const path = state.path;
+    // const state = window.history.state;
+    // const path = state.path;
+    const urlParams = new URLSearchParams(window.location.search);
+    const path = urlParams.get("redirect");
     debugger;
     if (path) navigate(path);
   }
