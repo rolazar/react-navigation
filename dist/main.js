@@ -2329,7 +2329,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Redirect(props) {
-  debugger;
   const children = props.children;
   const navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
   const [didMount, setDidMount] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
@@ -2341,12 +2340,11 @@ function Redirect(props) {
     setDidMount(true);
   }
   function componentDidUpdate() {
-    debugger;
     if (didMount) {
       const urlParams = new URLSearchParams(window.location.search);
       const path = urlParams.get("redirect");
       if (path) navigate(path);
-      setTimeout(() => setDidUpdate(true), 3000);
+      setTimeout(() => setDidUpdate(true), 1000);
     }
   }
 }
