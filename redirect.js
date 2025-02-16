@@ -1,5 +1,9 @@
 const home = "/react-navigation";
 const path = window.location.pathname;
-setTimeout(() => window.history.pushState("", "", home), 10000);
-// setTimeout(() => window.history.pushState("", "", path), 3000);
-// window.location.replace(home);
+const state = { path: path };
+
+//CHANGE THE URL WITHOUT REROUTING
+window.history.replaceState(state, "", path);
+
+//REDIRECT WITH RELOADING
+window.location.replace(home);
