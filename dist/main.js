@@ -2343,7 +2343,7 @@ function Redirect(props) {
     const path = urlParams.get("redirect");
     if (path) {
       navigate(path);
-      setTimeout(() => setDidUpdate(true), 1000);
+      setTimeout(() => setDidMount(true), 1000);
     } else setDidMount(true);
   }
   // function componentDidUpdate() {
