@@ -1,12 +1,8 @@
-const home = "/react-navigation";
-const path = window.location.pathname;
-const state = { path: path };
-
-debugger;
-console.log(state);
-
 //CHANGE THE URL WITHOUT REROUTING
+// const state = { path: path };
 // window.history.replaceState(state, "", path);
 
 //REDIRECT WITH RELOADING
-window.location.replace(`${home}?redirect=${path}`);
+const rootPath = "/react-navigation";
+const path = window.location.pathname;
+window.location.replace(`${rootPath}?redirect=${path}`);
