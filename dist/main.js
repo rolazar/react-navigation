@@ -2329,12 +2329,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Redirect(props) {
+  debugger;
   const children = props.children;
   const navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
   const [didMount, setDidMount] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
   if (didMount) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, children);else return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
   function componentDidMount() {
+    debugger;
     const urlParams = new URLSearchParams(window.location.search);
     const path = urlParams.get("redirect");
     if (path) navigate(path);
