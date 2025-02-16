@@ -2261,18 +2261,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar */ "./src/Views/Navbar.js");
-/* harmony import */ var _Banner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Banner */ "./src/Views/Banner.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
-
-
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/dist/development/chunk-SYFQ2XB5.mjs");
 
 
 function Home() {
-  const navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_3__.useNavigate)();
+  const navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
+  const urlParams = new URLSearchParams(window.location.search);
+  const path = urlParams.get("redirect");
+  if (path) navigate(path);
   // const path = window.location.pathname;
   // window.history.replaceState({ path: "/gallery" }, "", path);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(componentDidMount, []);
+  // useEffect(componentDidMount, []);
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", {
     className: "container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "The Venue"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
@@ -2287,7 +2287,6 @@ function Home() {
     // const path = state.path;
     const urlParams = new URLSearchParams(window.location.search);
     const path = urlParams.get("redirect");
-    debugger;
     if (path) navigate(path);
   }
 }
