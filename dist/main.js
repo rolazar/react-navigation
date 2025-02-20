@@ -14,9 +14,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   region: () => (/* binding */ region),
 /* harmony export */   secretAccessKey: () => (/* binding */ secretAccessKey)
 /* harmony export */ });
-const accessKeyId = "abc123";
-const secretAccessKey = "xyz321";
-const region = "qrs456";
+const accessKeyId = "AKIARVRG5Y7ASJDD725O";
+const secretAccessKey = "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";
+const region = "us-west-1";
 
 /***/ }),
 
