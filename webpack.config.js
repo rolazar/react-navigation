@@ -3,6 +3,7 @@ export default {
     rules: [
       {
         test: /\.js/,
+        exclude: /\.json/,
         use: "babel-loader",
       },
       {
