@@ -14,8 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   region: () => (/* binding */ region),
 /* harmony export */   secretAccessKey: () => (/* binding */ secretAccessKey)
 /* harmony export */ });
-const accessKeyId = "AKIARVRG5Y7ASJDD725O";
-const secretAccessKey = "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";
+const accessKeyId = "AKIARV3VT63ASJDD725O";
+const secretAccessKey = "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";
 const region = "us-west-1";
 
 /***/ }),
@@ -36900,7 +36900,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Navbar() {
-  debugger;
   let rootPath = "";
   const domain = window.location.hostname;
   if (domain === "rolazar.github.io") rootPath = "/react-navigation";
